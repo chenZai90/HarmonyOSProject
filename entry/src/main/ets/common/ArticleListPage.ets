@@ -15,6 +15,7 @@ class Article {
     this.isLiked = isLiked;
     this.likesCount = likesCount;
   }
+
 }
 @Entry
 @Component

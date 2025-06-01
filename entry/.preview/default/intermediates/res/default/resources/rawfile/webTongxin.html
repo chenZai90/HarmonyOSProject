@@ -1,0 +1,49 @@
+<!-- resources/rawfile/web_page.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <title>WebView 示例</title>
+</head>
+<body>
+<h1>HarmonyOS WebView 通信示例</h1>
+<button onclick="callNative()">调用原生方法</button>
+<button onclick="sendMessage()">发送消息到原生</button>
+<button onclick="callH5FromNative()">触发原生主动调用</button>
+<div id="result"></div>
+
+<script>
+    // H5 调用原生方法
+    function callNative() {
+      window.nativeProxy.callNative("来自 H5 的数据")
+        .then(result => {
+          document.getElementById('result').innerHTML += `<p>原生返回: ${result}</p>`;
+        });
+    }
+
+    // 发送消息到原生（通过 WebMessagePorts）
+    function sendMessage() {
+      if (window.port) {
+        window.port.postMessage({ type: 'request', data: '这是 H5 的消息' });
+      }
+    }
+
+    // 监听原生的消息（通过 WebMessagePorts）
+    window.port.onmessage = (event) => {
+      document.getElementById('result').innerHTML += `<p>收到原生回复: ${JSON.stringify(event.data)}</p>`;
+    };
+
+    // 触发原生主动调用 H5 的方法
+    function callH5FromNative() {
+      // 这里不需要代码，由原生主动调用
+    }
+
+    // 原生可能调用的 H5 方法示例
+    function showAlert(message) {
+      alert(message);
+      return "H5 已弹窗";
+    }
+</script>
+</body>
+</html>

@@ -2,7 +2,6 @@ import { webview } from '@kit.ArkWeb';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { router } from '@kit.ArkUI';
 
-
 @Entry
 @Component
 export default   struct MyWebHtml {
