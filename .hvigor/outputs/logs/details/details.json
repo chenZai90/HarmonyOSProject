@@ -3,10 +3,7 @@
     "MODULES": [
       {
         "MODULE_NAME": "1043bfc77febe75fafec0c4309faccf1",
-        "API_TYPE": "stageMode",
-        "INCREMENTAL_TASKS": {
-          "COMPILE_ARKTS": true
-        }
+        "API_TYPE": "stageMode"
       }
     ],
     "BUILD_MODE": "debug"
@@ -18,28 +15,29 @@
     "IS_HVIGORFILE_TYPE_CHECK": false,
     "TASK_TIME": {
       "1043bfc77febe75fafec0c4309faccf1": {
-        "ConfigureCmake": 235125,
-        "MergeProfile": 3302125,
-        "CreateBuildProfile": 2217125,
-        "PreCheckSyscap": 195125,
-        "GeneratePkgContextInfo": 303500,
-        "ProcessIntegratedHsp": 1162417,
-        "BuildNativeWithCmake": 210791,
-        "ProcessProfile": 83940833,
-        "SyscapTransform": 12077250,
-        "ProcessRouterMap": 1932708,
-        "BuildNativeWithNinja": 435750,
-        "GenerateLoaderJson": 5517958,
-        "CompileResource": 306329208,
-        "BuildJS": 1345084,
-        "CompileArkTS": 5466325958,
-        "GeneratePkgModuleJson": 746667,
-        "PackageHap": 308166084,
-        "SignHap": 889279042,
-        "assembleHap": 132917
+        "init": 325708,
+        "MergeProfile": 2880500,
+        "CreateBuildProfile": 1317500,
+        "PreCheckSyscap": 160000,
+        "GeneratePkgContextInfo": 202834,
+        "ProcessProfile": 41744250,
+        "ProcessRouterMap": 1974209,
+        "PreviewProcessResource": 916250,
+        "GenerateLoaderJson": 5385625,
+        "PreviewCompileResource": 168681958,
+        "PreviewHookCompileResource": 131583,
+        "CopyPreviewProfile": 1702750,
+        "ReplacePreviewerPage": 1038125,
+        "buildPreviewerResource": 149541,
+        "PreviewUpdateAssets": 857583,
+        "PreviewArkTS": 4458172375,
+        "PreviewBuild": 121209
+      },
+      "APP": {
+        "init": 121042
       }
     },
-    "BUILD_ID": "202505191710149730",
-    "TOTAL_TIME": 7920117458
+    "BUILD_ID": "202506151126547070",
+    "TOTAL_TIME": 4806104916
   }
 }
